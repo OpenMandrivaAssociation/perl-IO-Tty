@@ -12,7 +12,6 @@ Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.bz2
 BuildRequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
