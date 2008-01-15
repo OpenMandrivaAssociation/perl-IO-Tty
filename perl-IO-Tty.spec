@@ -25,7 +25,7 @@ The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
 %make CFLAGS="%{optflags}"
 
 %check
-#%{__make} test
+%{__make} test
 
 %install
 rm -rf %{buildroot}
