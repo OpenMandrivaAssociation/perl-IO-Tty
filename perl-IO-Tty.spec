@@ -1,7 +1,7 @@
 %define module  IO-Tty
 %define name    perl-%{module}
-%define version 1.07
-%define release %mkrel 4
+%define version 1.08
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
