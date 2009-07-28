@@ -1,24 +1,24 @@
-%define module  IO-Tty
-%define name    perl-%{module}
-%define version 1.08
-%define release %mkrel 1
+%define upstream_name    IO-Tty
+%define upstream_version 1.08
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release} 
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Pseudo TTY object class
 License:        GPL
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.bz2
+URL:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,4 +40,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/auto/IO
 %{perl_vendorarch}/IO
 %{_mandir}/*/*
-
