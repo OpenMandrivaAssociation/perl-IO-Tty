@@ -13,8 +13,6 @@ Source0:        http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upst
 
 BuildRequires:  perl-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
-# temporary dep due to the perl-5.14 bump
-BuildRequires:	perl-List-MoreUtils >= 0.320.0-4
 
 %description
 The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
