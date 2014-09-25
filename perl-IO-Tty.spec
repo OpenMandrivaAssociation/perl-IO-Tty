@@ -1,11 +1,11 @@
 %define modname	IO-Tty
-%define modver 1.11
+%define modver 1.12
 
 Summary:	Pseudo TTY object class
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -34,5 +34,3 @@ The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
 %{perl_vendorarch}/auto/IO
 %{perl_vendorarch}/IO
 %{_mandir}/man3/*
-
-
