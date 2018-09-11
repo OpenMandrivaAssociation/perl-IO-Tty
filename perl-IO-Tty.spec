@@ -1,8 +1,8 @@
 %define modname	IO-Tty
 %define modver 1.12
+%define _disable_ld_no_undefined 1
 
 Summary:	Pseudo TTY object class
-
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
 Release:	6
