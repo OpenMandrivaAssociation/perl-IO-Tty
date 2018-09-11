@@ -10,8 +10,12 @@ License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl-devel
 
+# Don't "provide" private Perl libs
+%{?perl_default_filter}
 
 %description
 The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
