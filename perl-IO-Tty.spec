@@ -13,6 +13,7 @@ Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl-devel
+BuildRequires:	pkgconfig(libbsd)
 
 # Don't "provide" private Perl libs
 %{?perl_default_filter}
