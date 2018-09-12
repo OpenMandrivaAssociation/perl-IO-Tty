@@ -1,6 +1,7 @@
 %define modname	IO-Tty
 %define modver 1.12
 %define _disable_ld_no_undefined 1
+%global optflags %{optflags} --rtlib=compiler-rt
 
 Summary:	Pseudo TTY object class
 Name:		perl-%{modname}
@@ -13,7 +14,6 @@ Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl-devel
-BuildRequires:	pkgconfig(libbsd)
 
 # Don't "provide" private Perl libs
 %{?perl_default_filter}
