@@ -2,11 +2,12 @@
 %define modver 1.12
 %define _disable_ld_no_undefined 1
 %global optflags %{optflags} --rtlib=compiler-rt
+%define _disable_lto 1
 
 Summary:	Pseudo TTY object class
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	7
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -22,17 +23,17 @@ BuildRequires:	perl-devel
 The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%make_build CFLAGS="%{optflags}"
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc ChangeLog README
