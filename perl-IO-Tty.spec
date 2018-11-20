@@ -1,7 +1,6 @@
 %define modname	IO-Tty
 %define modver 1.12
 %define _disable_ld_no_undefined 1
-%global optflags %{optflags} --rtlib=compiler-rt
 %define _disable_lto 1
 
 Summary:	Pseudo TTY object class
@@ -26,7 +25,7 @@ The IO::Tty and IO::Pty modules provide an interface to pseudo tty's.
 %autosetup -n %{modname}-%{modver} -p1
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
 %make_build CFLAGS="%{optflags}"
 
 %check
