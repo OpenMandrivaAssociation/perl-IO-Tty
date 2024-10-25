@@ -6,7 +6,7 @@
 Summary:	Pseudo TTY object class
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	9
+Release:	10
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
